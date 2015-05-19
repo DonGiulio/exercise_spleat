@@ -36,6 +36,21 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
+  # test suite
+  gem 'rspec-rails'
+  # generator
+  gem 'factory_girl_rails'
+  
+  # debugging
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-doc'
+  
+  # CI
+  gem 'guard'
+
+
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
