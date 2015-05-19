@@ -2,13 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Venue, type: :model do
   before(:each) do
-    @venues = create_list :venue, 10
+    @venue = create :venue
   end
   
   it "has several tabs" do
-    @venues.each do |v|
-      expect(v.tabs.size).to eq 10
-    end
+    expect(@venue.tabs.size).to eq 10
   end
   
 end

@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Tab, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before(:each) do
+    @venue = create :venue
+    @tab = @venue.tabs.first
+  end
+  
+  
+  it "has several users" do
+    expect(@tab.users.size).to be 10
+  end
 end
