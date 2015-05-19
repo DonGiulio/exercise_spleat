@@ -47,7 +47,7 @@ group :development, :test do
   gem 'pry-doc'
   
   # CI
-  gem 'guard'
+  gem 'guard-rspec'
 
 
 
