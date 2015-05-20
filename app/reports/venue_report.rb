@@ -1,5 +1,11 @@
 class VenueRow
-  attr_accessor :name, :transactions, :value
+  attr_reader :name, :transactions, :value
+  
+  def initialize (attributes)
+    @name = attributes[:name]
+    @transactions = attributes[:transactions]
+    @value = attributes[:value]
+  end
 end
 
 class VenueReport
@@ -10,7 +16,9 @@ class VenueReport
   def generate
     @venues.map do |v|
       cur_tabs = v.tabs
-      VenueRow.new(name: v.name, transactions: cur_tabs.size, value: total)
+      number = cur_tabs.inject(0) {|sum, tab| sum + tab.user_tab.inject(0) { |cur, ut| cur + ut.payments.count }}
+      total = cur_tabs.inject(0) {|sum, tab| sum + tab.total}
+      VenueRow.new(name: v.name, transactions: number, value: total)
     end
   end
 end
