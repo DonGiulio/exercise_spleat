@@ -11,16 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519213425) do
+ActiveRecord::Schema.define(version: 20150520203033) do
 
   create_table "payments", force: :cascade do |t|
     t.float    "amount"
-    t.integer  "belongs_to_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_tab_id"
   end
-
-  add_index "payments", ["belongs_to_id"], name: "index_payments_on_belongs_to_id"
 
   create_table "tabs", force: :cascade do |t|
     t.integer  "venue_id"

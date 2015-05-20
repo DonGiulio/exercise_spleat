@@ -7,11 +7,21 @@ RSpec.describe UserTab, type: :model do
   end
   
   it "has several users" do 
-    expect(@tab.users.size).to be 10
+    expect(@tab.users.size).to be 5
   end
   
-  it "has several payments" do
-    expect(@tab.user_tab.payments).to be 10
+  it "has several user_tabs" do
+    expect(@tab.user_tab.size).to be 5
+  end
+  
+  it "each user tab has several payments" do 
+    @tab.user_tab.each do |tab|
+      expect(tab.payments.size).to be > 0
+    end
+  end
+  
+  it "calculates the sum of the payments" do
+    expect(@tab.user_tab.first.total).to be > 0
   end
   
 end

@@ -3,7 +3,7 @@ FactoryGirl.define do
     sequence(:name) { |n| "venue_#{n}"}
     
     after :create do |v|
-      10.times.each {create :tab, :venue => v}
+      5.times.each {create :tab, :venue => v}
     end
     
   end

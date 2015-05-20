@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe VenueReport, :type => :feature do
   before(:each) do
-    @venues = create_list :venue, 10
+    @venues = create_list :venue, 5
   end
   
   it "Generates a new report" do

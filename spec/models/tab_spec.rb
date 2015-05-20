@@ -8,6 +8,6 @@ RSpec.describe Tab, type: :model do
   
   
   it "has several users" do
-    expect(@tab.users.size).to be 10
+    expect(@tab.users.size).to be 5
   end
 end

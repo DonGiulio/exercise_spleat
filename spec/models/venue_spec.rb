@@ -6,7 +6,7 @@ RSpec.describe Venue, type: :model do
   end
   
   it "has several tabs" do
-    expect(@venue.tabs.size).to eq 10
+    expect(@venue.tabs.size).to eq 5
   end
   
 end

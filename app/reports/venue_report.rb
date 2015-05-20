@@ -10,7 +10,6 @@ class VenueReport
   def generate
     @venues.map do |v|
       cur_tabs = v.tabs
-      total = cur_tabs.inject {|sum, tab| sum + tab.value} 
       VenueRow.new(name: v.name, transactions: cur_tabs.size, value: total)
     end
   end
