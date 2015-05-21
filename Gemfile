@@ -38,6 +38,7 @@ group :development, :test do
 
   # test suite
   gem 'rspec-rails'
+  gem 'simplecov'
   # generator
   gem 'factory_girl_rails'
   
@@ -47,7 +48,7 @@ group :development, :test do
   gem 'pry-doc'
   
   # CI
-  gem 'guard'
+  gem 'guard-rspec'
 
 
 
