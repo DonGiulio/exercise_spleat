@@ -4,7 +4,4 @@ class UserTab < ActiveRecord::Base
   
   has_many :payments
   
-  def total
-    self.payments.inject(0) {|sum, payment| sum + payment.amount}
-  end
 end

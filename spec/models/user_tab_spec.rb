@@ -20,8 +20,4 @@ RSpec.describe UserTab, type: :model do
     end
   end
   
-  it "calculates the sum of the payments" do
-    expect(@tab.user_tab.first.total).to be > 0
-  end
-  
 end

@@ -25,7 +25,6 @@ RSpec.describe VenueReport, :type => :feature do
     expect(report.class).to be Array
     expect(report.size).to be @venues.size
     expect(report.first.class).to be VenueRow
-    binding.pry
   end
   
   it "generates reports that are sorted" do

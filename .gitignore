@@ -18,3 +18,4 @@
 .rake_tasks
 .DS_Store
 coverage
+bin
